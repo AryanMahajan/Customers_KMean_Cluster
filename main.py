@@ -31,8 +31,8 @@ for i in range(1,11):
   wcss.append(kmeans.inertia_)
 
 # plot an elbow graph
-sns.set()
 plt.plot(range(1,11), wcss)
+plt.savefig("outputs\Figure_1.png")
 plt.title('The Elbow Point Graph')
 plt.xlabel('Number of Clusters')
 plt.ylabel('WCSS')
@@ -54,7 +54,7 @@ plt.scatter(X[Y==4,0], X[Y==4,1], s=50, c='blue', label='Cluster 5')
 
 # plot the centroids
 plt.scatter(kmeans.cluster_centers_[:,0], kmeans.cluster_centers_[:,1], s=100, c='cyan', label='Centroids')
-
+plt.savefig("outputs\Figure_2.png")
 plt.title('Customer Groups')
 plt.xlabel('Annual Income')
 plt.ylabel('Spending Score')
